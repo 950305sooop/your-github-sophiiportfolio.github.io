@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sophii Huang – Portfolio</title> <!-- REPLACE: page title -->
+
+  <!-- Optional: Google Font (uncomment if you want) -->
+  <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet"> -->
+
+  <link rel="stylesheet" href="style.css" />
+  <script src="main.js"></script>
+</body>
+</head>
+<body>
+    
+  <div class="page"></div>
+  <!-- ======= SHOWCASE CARD (split left / right) ======= -->
+  <section class="showcase" aria-label="Hero showcase">
+    <!-- LEFT: big visual with overlay top bar and headline near bottom -->
+    <div class="left-pane">
+      <!-- Top bar over the image -->
+      <div class="left-topbar" aria-label="Brand crumbs">
+        <div class="logo" aria-label="Logo">Sh</div> <!-- REPLACE: initials/logo -->
+        <span class="crumbs"> Enjoying | Learning | Design</span> <!-- REPLACE -->
+      </div>
+
+      <!-- Bottom-left headline/text -->
+      <div class="left-content">
+        <h3>Interaction Design</h3> <!-- REPLACE -->
+        <h1>SOPHII HUANG</h1>  <!-- REPLACE -->
+        <p>
+          I am studying Interaction Design at University of Washington.
+          
+        </p> <!-- REPLACE -->
+        <div class="cta-row">
+          <a class="btn btn-primary" href="resume.pdf" target="_blank" rel="noopener">View Resume</a> <!-- REPLACE -->
+          <a class="btn btn-ghost" href="#project">See Projects</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: yellow pane with nav, portrait, tags, thumbnails -->
+    <div class="right-pane">
+      <!-- Top navigation bar -->
+      <div class="right-topbar">
+        <nav class="main-nav" aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#project">Projects</a>
+        </nav>
+        <a class="contact" href="#contact">Contact</a>
+      </div>
+
+      <p class="kicker">HEY I'M SOPHII</p> <!-- REPLACE -->
+      <img class="portrait" src="images/portrait.webp" alt="portrait of SOPHII HUANG" /> <!-- REPLACE -->
+
+      <!-- Pill tags row -->
+      <div class="tagbar" aria-label="Work categories">
+        <button class="tag" data-filter="pic">Photography</button>
+        <button class="tag" data-filter="art">Other Arts</button>
+      </div>
+
+      <!-- Thumbnails rail -->
+      <div id="projects" class="thumbs" aria-label="Project thumbnails">
+        <!-- REPLACE image src + alt text -->
+        <a href="#" class="thumb" data-tags="art">
+          <img src="images/work1.webp" alt="art" />
+        </a>
+        <a href="#" class="thumb" data-tags="pic">
+          <img src="images/work2.webp" alt="pic" />
+        </a>
+        <a href="#" class="thumb" data-tags="art">
+          <img src="images/work3.webp" alt="art" />
+        </a>
+        <a href="#" class="thumb" data-tags="pic">
+          <img src="images/work4.webp" alt="pic" />
+        </a>
+        <a href="#" class="thumb" data-tags="art">
+            <img src="images/work5.webp" alt="art" />
+          </a>
+          <a href="#" class="thumb" data-tags="pic">
+            <img src="images/work6.webp" alt="pic" />
+          </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= OPTIONAL CONTENT SECTIONS ======= -->
+  <section id="about" class="content">
+    <h2>About</h2>
+    <div class="about-text">
+      <div class="about-left">
+        <p>My name is Sopihi Huang, I was born in Taiwan and moved to the States in 11th grade. 
+           I love drawing, sewing, playing badminton, and Designing.
+          <br>
+          <br>
+          So exciting to start my design learning journey at University of Washington and be part of community!
+        </p>
+
+      </div>
+      
+      <div class="about-right">
+        <p>What I like about design the most is working with people and brainstorming ideas with them. 
+          I enjoying the moment when different ideas emerge and spark new possibilities. 
+          <br>
+          <br>
+          I also really love the energy of the communities within UW RSOs. I always get inspired and motivated by attending different club meetings and listening to different stories from excellent people.
+          </p>
+      </div>
+    </div>
+  </section>
+  
+  <section id="project" class="content">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <a href="project/project1.html" class="project-card">
+        <img src="images/project1.webp" alt="Project 1 thumbnail">
+        <h3>Your Community App Design</h3>
+        <p>A UX case study exploring how to connect apartment residents.</p>
+      </a>
+      <a href="project/project2.html" class="project-card">
+        <img src="images/project2.webp" alt="Project 2 thumbnail">
+        <h3>VoiceNote App Design & Build</h3>
+        <p>Learning to use Ai language model to build self-designed app. </p>
+      </a>
+      <a href="project/project3.html" class="project-card">
+        <img src="images/project3.webp" alt="Project 3 thumbnail">
+        <h3>Printmaking and Color</h3>
+        <p>Exploring CMYK lithography and life stages through print.</p>
+      </a>
+      <a href="project/project4.html" class="project-card">
+        <img src="images/project4.webp" alt="Project 3 thumbnail">
+        <h3>Figma Learning: Website for My Cat</h3>
+        <p>Self learning Figma through building a website for my cat.</p>
+      </a>
+      <a href="project/project5.html" class="project-card">
+        <img src="images/project5.webp" alt="Project 3 thumbnail">
+        <h3>Other Design and Art</h3>
+        <p>Design and Art that create along the way. </p>
+      </a>
+    </div>
+  </section>
+  
+
+
+  <section id="contact" class="content">
+    <h2>Contact</h2>
+    <p><!-- REPLACE -->Email: <a href="mailto:hsoppp0305@gmail.com">hsoppp0305@gmail.com</a></p>
+    <div class="button-group">
+      <a class="btn btn-primary" href="resume.pdf" target="_blank" rel="noopener">View Resume</a>
+      <a class="btn btn-outline" href="www.linkedin.com/in/sophii-huang" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </section>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>

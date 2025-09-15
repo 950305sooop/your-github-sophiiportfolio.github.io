@@ -1,0 +1,188 @@
+:root{
+    --bg:#fafafa;
+    --text:#111827;
+    --muted:#6b7280;
+    --chip:#f1f5f9;
+    --brand:#405171;     /* deep slate-blue */
+    --accent:#e5cfa3;    /* warm accent for badges */
+    --card: #ffffff;
+    --shadow: 0 10px 28px rgba(0,0,0,.12);
+  }
+  
+  *{ box-sizing:border-box; }
+  body{
+    margin:0; background:var(--bg); color:var(--text);
+    font: 16px/1.6 Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  }
+  
+  /* Container controlling page margins */
+  .container{
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 40px;
+    padding: 0 40px;          /* global left/right breathing room */
+  }
+  
+  /* Generic section wrapper with numbered badge */
+  .section{
+    position: relative;
+    padding: 100px 0;
+    counter-increment: sec;
+  }
+  .section::before{
+    /* Number chip (uses data-sec= for manual numbers) */
+    content: attr(data-sec);
+    position:absolute; left:0px; top:10px;
+    background:var(--chip); color:#94a3b8;
+    font-weight:800; letter-spacing:.06em; font-size:.9rem;
+    padding:6px 10px; border-radius:8px;
+  }
+  
+  /* Headings rhythm */
+  h1{ font-size: clamp(40px, 6vw, 72px); line-height:1.05; margin:0 0 8px; }
+  h2{ font-size: clamp(24px, 3.2vw, 34px); margin: 0 0 10px; }
+  h3{ font-size: 20px; margin: 10px 0 6px; color:var(--brand); }
+  .lede{ color:var(--muted); font-size:1.06rem; max-width: 65ch; }
+  
+  .sub{ color:var(--muted); margin-bottom:10px; }
+  .bullets{ margin:14px 0 0; padding-left:18px; }
+  .inline-tags{ display:flex; gap:8px; flex-wrap:wrap; padding:0; margin:10px 0 0; list-style:none; }
+  .inline-tags li{ background:var(--chip); padding:6px 10px; border-radius:999px; font-size:.9rem; color:#475569; }
+  
+  img{ max-width:100%; height:auto; display:block; border-radius:12px; box-shadow:var(--shadow); }
+  
+  /* ===== HERO (50/50) ===== */
+  .hero{ display:grid; grid-template-columns: 1fr 1fr; gap:40px; align-items:center; }
+  .hero-media img{ border-radius:14px; }
+  
+
+  .meta {
+    margin-top: 200px; /* pushes it further down */
+    font-size: 0.95rem; /* optional: slightly smaller text */
+    line-height: 1.6;
+  }
+  /* ===== 2-col layout (Overview, Style Guide, etc.) ===== */
+.two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;     /* side by side */
+    grid-template-areas:
+      "head head"
+      "text media";
+    gap: 40px;
+    align-items: start;
+  }
+  
+  /* Header spans across both columns */
+  .two-col .sec-head {
+    grid-area: head;
+    margin: 0;
+  }
+  
+  .two-col__text {
+    grid-area: text;
+    max-width: 500px;
+    
+  }
+  
+  .two-col__media {
+    grid-area: media;
+    justify-self: end;
+  }
+  
+  .two-col__media img {
+    width: 100%;
+    max-width: 520px;
+    border-radius: 12px;
+    display: block;
+  }
+  
+  /* Mobile: stack them */
+  @media (max-width: 900px) {
+    .two-col {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "head"
+        "text"
+        "media";   /* change order here if you want text first */
+      gap: 20px;
+    }
+    .two-col__media { justify-self: stretch; }
+    .two-col__text { max-width: none; }
+  }
+   /* ===== project overview ===== */
+   .overview {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* header | text */
+    gap: 40px;
+    align-items: start;
+  }
+  
+  /* Optional tweaks */
+  .overview .sec-head { margin: 0; }
+  .overview .two-col__text { max-width: 650px; }
+  
+  /* Mobile: stack them again */
+  @media (max-width: 768px) {
+    .two-col {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+
+  
+  /* ===== Split tiles (Problem/Goal) ===== */
+  .split-tiles{ display:grid; grid-template-columns: 1fr 1fr; gap:24px; }
+  .tile{ background:var(--card); padding:16px; border-radius:12px; box-shadow:var(--shadow); }
+  .tile img{ margin-top:10px; }
+  
+  .research {
+    display: block;
+    margin-top: 60px;
+  }
+  
+  /* ===== Personas (3-up) ===== */
+  .persona-grid{
+    display:grid; grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+
+  }
+  .persona{
+    background:var(--card); padding:16px; border-radius:12px; box-shadow:var(--shadow);
+  }
+  .persona__top{ display:flex; gap:12px; align-items:flex-start; margin-bottom:8px; }
+  .persona__top img{ width:64px; height:64px; object-fit:cover; border-radius:12px; box-shadow:none; }
+  .persona__meta h3{ margin:0; }
+  .persona .small{ margin:2px 0 0; color:var(--muted); font-size:.92rem; }
+  .persona__facts{ margin:10px 0 0; padding-left:18px; }
+  
+  /* ===== 2-up image grid ===== */
+  .grid-2__wrap{ display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+
+
+  .full img {
+    border-radius: 12px; 
+  }
+  /* wireframe image */
+  .wireframe-image{
+    border-radius: 12px; /* optional */
+  }
+  .user-journey-image{
+    border-radius: 12px; /* optional */
+  }
+
+
+  
+
+  /* ===== Responsive ===== */
+  @media (max-width: 1000px){
+    .hero{ grid-template-columns: 1fr; }
+    .two-col{ grid-template-columns: 1fr; }
+    .split-tiles{ grid-template-columns: 1fr; }
+    .persona-grid{ grid-template-columns: 1fr 1fr; } /* 2-up on tablet */
+    .grid-2__wrap{ grid-template-columns:1fr; }
+  }
+  @media (max-width: 640px){
+    .container{ padding: 0 20px; }
+    .persona-grid{ grid-template-columns: 1fr; }  /* 1-up on mobile */
+  }
+  

@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Community – Case Study | Sopihii Huang</title>
+  <link rel="stylesheet" href="../project2.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="content">
+        
+        <a href="../index.html">← Back to Portfolio</a>
+    </header>
+      
+
+    <!-- ============ HERO (50/50) ============ -->
+    <section class="section hero" data-sec="01">
+      <div class="hero-text">
+        <h1>VoiceNote</h1>
+        <p class="lede">
+            The app allows user organize and shares their To-Do list by one tap on home widget, it convert voice to text and updates to both users' side. 
+        </p>
+
+        <div class="meta">
+          <div><strong>Role:</strong> UX Research, Wireframes, UI, Prototype, AI prompt, code</div>
+          <div><strong>Timeline:</strong> August 14 — Semtemper 2, 2025</div>
+          <div><strong>Type:</strong> Self-initiated project</div>
+        </div>
+      </div>
+
+      <div class="hero-media">
+        <!-- ADD IMAGE: replace src -->
+        <img src="../images/voicenote.webp" alt="Hero preview of the app" />
+        <!-- e.g. 1600×1200 or larger -->
+      </div>
+    </section>
+
+    <!-- OVERVIEW -->
+  <section class="section overview two-col" data-sec="02">
+    <!-- LEFT: header -->
+    <header class="sec-head">
+      <h2>Project Overview</h2>
+      <p class="sub">UX/UI Design • Effiency • AI Assistant</p>
+      <ul>
+        <li><strong> Tools: </strong> Figma, HTML, Supabase, ChatGPT, Claude, Netlify, Notion.</li>
+        <li><strong>Netlity Link(in progress work):</strong>
+            <a href="https://thunderous-ganache-eecd66.netlify.app">VoiceNote Link</a>
+        </li>
+      </ul>
+    </header>
+  
+    <!-- RIGHT: text content -->
+    <div class="two-col__media">
+      <p>Voice Note is a concept app I designed to help people capture and share to-do lists in the most natural way, which is by speaking. 
+        The app automatically converts voice into text, organizes tasks, and allows sharing with close friends via widget.
+    </p>
+    </div>
+  </section>
+
+   <!-- ============ PROBLEM / GOAL / Target user============ -->
+   <section class="section split-tiles" data-sec="03">
+    <article class="tile">
+      <h3>The Problem</h3>
+      <p>
+        • To-do tasks gets override easy in the messages.<br>
+        • Quick thoughts/tasks get lost if not written down immediately.<br>
+        • Existing note apps are too slow<br>(open → type → save → share).
+      </p>
+
+    </article>
+
+    <article class="tile">
+      <h3>The Goal</h3>
+      <p>• Capture tasks instantly, effortlessly. <br>
+         • Make the To-do list stand out on the device.<br>
+         • Share selectively with trusted friends.
+        </p>
+    </article>
+    <article class="tile">
+        <h3>Target Users</h3>
+        <p class="sub"> <strong>Who: </strong>Busy students, workers, or people with ADHD who need fast capture.</p>
+        <p>
+            <strong>Needs: </strong> <br>
+           • Capture tasks instantly, effortlessly. <br>
+           • Automatic reminders through shared widget<br>
+           • Easy to organize the tasks.
+          </p>
+      </article>
+  </section>
+
+  <!-- ============ Initial idea============ -->
+  <section class="section two-col" data-sec="04">
+    <header class="sec-head">
+      <h2>Initial Ideas</h2>
+      <p class="sub">How might we capture the quick thoughts? How might we make sure important small tasts get done?</p>
+    </header>
+
+    <div class="two-col__text">
+      <p>I was texting my boyfriend and reminding him what we need to buy from Costco. 
+        I quickly realized that <strong>shopping list gets override by other texts</strong>, making it hard to track. 
+        We both likes to use voice message because it's <strong>faster and it frees your hand from typing.</strong> 
+        But at the same time, it takes more time to listen than reading the texts. The idea of VoiceNote formed, <strong>converting voices to texts and shares it automatically.</strong>
+      </p>
+      
+    </div>
+
+    <div class="two-col__media">
+      <!-- ADD IMAGE -->
+      <img src="../images/initial.webp" alt="Style guide board" />
+    </div>
+  </section>
+   <!-- ============ User Research ============ -->
+  <section class="section two-col" data-sec="04">
+    <header class="sec-head">
+      <h2>User Research</h2>
+      <p class="sub">Frictionless Capture • Voice Record • Privacy & Safety</p>
+    </header>
+    <div class="two-col__text">
+        <p>
+            I interviewed two of my friends, and they both prefer speaking over texting. 
+            Because it's faster and feels more connected. 
+            One thing that stand out: They think it's akward to listening their own voices.
+            <br>
+            <br>Here's three things we want to focused on:
+        </p>
+        
+      </div>
+
+    <div class="two-col__media">
+      <!-- ADD IMAGE -->
+      <img src="../images/research-v.webp" alt="Style guide board" />
+    </div>
+  </section>
+
+ <!-- ============ COMPETITIVE AUDIT ============ -->
+ <section class="section one-col" data-sec="05">
+    <header class="sec-head">
+      <h2>Competitive Audit</h2>
+      <p class="sub">Compared with note apps and locket(a app for quick snap shares).</p>
+    </header>
+
+    <!-- ADD IMAGE (table/scorecard) -->
+    <img class="full" src="../images/audit-v.webp" alt="Competitive audit table" />
+  </section>
+
+  <!-- ============ Process (3-up horizontal) ============ -->
+  <section class="section personas" data-sec="06">
+    <header class="sec-head">
+      <h2>Process</h2>
+      <p class="sub">I only have 1 class of coding experience(CSE121). 
+        <br>But with the help from Claude and ChatGPT, I am able to learn through the creating process! </p>
+    </header>
+
+    <div class="persona-grid">
+       <!-- P1 -->
+       <article class="persona">
+        <div class="persona__top">
+          <div class="persona__meta">
+            <h3>Prototype</h3>
+            <p class="small">Sketch flows and wireframes in Figma.<p> Prototype(draft):
+                <a href="https://www.figma.com/proto/tnUbwIdkKGYcimcM6fKXlX/VoiceNote?page-id=0%3A1&node-id=1-2&t=tgxUiFpN1muc1nQg-1">Figma Link</a></p>
+            </li></p>
+          </div>
+        </div>
+        <!-- ADD IMAGE -->
+        <img src="../images/process1.webp" alt="Persona 3 portrait" />
+      </article>
+
+    <!-- P 2-->
+    <article class="persona">
+        <div class="persona__top">
+          <div class="persona__meta">
+            <h3>Database</h3>
+            <p class="small">Learn how databases (Supabase) handle authentication + sharing</p>
+          </div>
+        </div>
+        <!-- ADD IMAGE -->
+        <img src="../images/process2.webp" alt="Persona 4 portrait" />
+      </article>
+      <!-- P3 -->
+      <article class="persona">
+        <div class="persona__top">
+          <div class="persona__meta">
+            <h3>Coding with AI</h3>
+            <p class="small">Prompt with Ai generator. Learning from how to setup the files to start understand the pattern and logics.</p>
+          </div>
+        </div>
+         <!-- ADD IMAGE -->
+         <img src="../images/process3.webp" alt="Persona 3 portrait" />
+      </article>
+
+    <!-- P 4 -->
+    <article class="persona">
+        <div class="persona__top">
+          <div class="persona__meta">
+            <h3>Debugging</h3>
+            <p class="small">Providing possible error details to Ai model and solve the issues together. </p>
+          </div>
+        </div>
+         <!-- ADD IMAGE -->
+         <img src="../images/process4.webp" alt="Persona 4 portrait" />
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ foot print ============ -->
+  <section class="section two-col" data-sec="04">
+    <header class="sec-head">
+      <h2>Process Footprints</h2>
+      <p class="sub">Prompting and debugging with Claude and ChatGPT</p>
+    </header>
+    <div class="two-col__text">
+        <p>
+            I captured a LOT of screenshots of my challenges and ideas to AI models. 
+            It's a bit chaos because I have to ask and learn a lot of things from scratch. I definitely learned a lot, from what is database to how it works, and setting up step by step, but I don't fully understand the logic behinds it. 
+            Samething happen in functional coding, I realized that relying on AI to code isn't the best practice for a beginner, I think it's better to learn the basic logic of the language first and code with AI's help. 
+            <br>I still learn a lot aboiut html and css, I can understand how interface design are tight to 
+        </p>
+        
+      </div>
+
+    <div class="two-col__media">
+      <!-- ADD IMAGE -->
+      <img src="../images/screenshots.webp" alt="Style guide board" />
+    </div>
+  </section>
+
+  <!-- ============ demo ============ -->
+  <section class="section two-col" data-sec="04">
+    <header class="sec-head">
+      <h2>Demo Video (unfinished)</h2>
+      <p class="sub">Prompting and debug
+        ging with Claude and ChatGPT</p>
+    </header>
+    <video width="832" height="468" autoplay muted loop>
+      <source src="video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </section>
+  <a href="../index.html">← Back to Portfolio</a> 
+    <p><br></p>
+
+  </main>
+</body>
+</html>

@@ -1,0 +1,132 @@
+:root{
+    --bg:#fafafa;
+    --text:#111827;
+    --muted:#6b7280;
+    --chip:#f1f5f9;
+    --brand:#405171;     /* deep slate-blue */
+    --accent:#e5cfa3;    /* warm accent for badges */
+    --card: #ffffff;
+    --shadow: 0 10px 28px rgba(0,0,0,.12);
+  }
+  
+  *{ box-sizing:border-box; }
+  body{
+    margin:0; background:var(--bg); color:var(--text);
+    font: 16px/1.6 Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  }
+  
+  /* Container controlling page margins */
+  .container{
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 40px;
+    padding: 0 40px;          /* global left/right breathing room */
+  }
+  
+  /* Generic section wrapper with numbered badge */
+  .section{
+    position: relative;
+    padding: 100px 0;
+    counter-increment: sec;
+  }
+  .section::before{
+    /* Number chip (uses data-sec= for manual numbers) */
+    content: attr(data-sec);
+    position:absolute; left:0px; top:10px;
+    background:var(--chip); color:#94a3b8;
+    font-weight:800; letter-spacing:.06em; font-size:.9rem;
+    padding:6px 10px; border-radius:8px;
+  }
+  
+  /* Headings rhythm */
+  h1{ font-size: clamp(40px, 6vw, 72px); line-height:1.05; margin:0 0 8px; }
+  h2{ font-size: clamp(24px, 3.2vw, 34px); margin: 0 0 10px; }
+  h3{ font-size: 20px; margin: 10px 0 6px; color:var(--brand); max-width:64;}
+  .lede{ color:var(--muted); font-size:1.06rem; max-width: 65ch; }
+  
+  .sub{ color:var(--muted); margin:0; max-width: 650px; }
+  .bullets{ margin:14px 0 0; padding-left:18px; }
+  .inline-tags{ display:flex; gap:8px; flex-wrap:wrap; padding:0; margin:10px 0 0; list-style:none; }
+  .inline-tags li{ background:var(--chip); padding:6px 10px; border-radius:999px; font-size:.9rem; color:#475569; }
+  
+  img{ max-width:100%; height:auto; display:block; border-radius:12px; box-shadow:var(--shadow); }
+  
+  /* ===== HERO (50/50) ===== */
+  .hero{ display:grid; grid-template-columns: 1fr 1fr; gap:40px; align-items:center; }
+  .hero-media img{ border-radius:14px; }
+  
+
+  .meta {
+    margin-top: 220px; /* pushes it further down */
+    font-size: 0.95rem; /* optional: slightly smaller text */
+    line-height: 1.6;
+  }
+
+  /* =======image=======*/
+  .process-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    gap: 1rem; /* space between images */
+    margin-top: 1rem;
+  }
+  
+  .process-grid img {
+    width: 100%;       /* make images scale to fit column */
+    height: auto;      /* keep proportions */
+    border-radius: 8px; /* optional: rounded corners */
+    object-fit: cover; /* keeps images neat inside their box */
+  }
+  .etching-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 3 equal columns */
+    gap: 1rem; /* space between images */
+    margin-top: 1rem;
+  }
+  
+  .etching-grid img {
+    width: 100%;       /* make images scale to fit column */
+    height: auto;      /* keep proportions */
+    border-radius: 8px; /* optional: rounded corners */
+    object-fit: cover; /* keeps images neat inside their box */
+  }
+  .mono-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    gap: 1rem; /* space between images */
+    margin-top: 1rem;
+  }
+  
+  .mono-grid img {
+    width: 100%;       /* make images scale to fit column */
+    height: auto;      /* keep proportions */
+    border-radius: 8px; /* optional: rounded corners */
+    object-fit: cover; /* keeps images neat inside their box */
+  }
+  .litho-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 3 equal columns */
+    gap: 1rem; /* space between images */
+    margin-top: 1rem;
+  }
+  
+  .litho-grid img {
+    width: 100%;       /* make images scale to fit column */
+    height: auto;      /* keep proportions */
+    border-radius: 8px; /* optional: rounded corners */
+    object-fit: cover; /* keeps images neat inside their box */
+  }
+  .final-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr); /* 3 equal columns */
+    gap: 1rem; /* space between images */
+    margin-top: 1rem;
+  }
+  
+  .final-grid img {
+    width: 100%;       /* make images scale to fit column */
+    height: auto;      /* keep proportions */
+    border-radius: 8px; /* optional: rounded corners */
+    object-fit: cover; /* keeps images neat inside their box */
+  }
+
+  

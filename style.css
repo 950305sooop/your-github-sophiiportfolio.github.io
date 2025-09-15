@@ -1,0 +1,221 @@
+/* =========================
+   THEME VARIABLES (edit colors once)
+   ========================= */
+   :root{
+    --bg: #ffffff;
+    --text: #1a1a1a;
+    --muted: #6b7280;
+    --primary: #2b377a;     /* buttons, links */
+    --primary-700:#4c51bf;
+    --accent: #c5a0c2;      /* right pane yellow */
+    --card-shadow: 0 10px 30px rgba(0,0,0,.08);
+  }
+  
+  /* Base */
+  *{ box-sizing: border-box; }
+  html,body{ height:100%; }
+  body{
+    margin:0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Inter", system-ui, -apple-system, Arial, sans-serif; /* REPLACE font if needed */
+    line-height:1.6;
+  }
+  
+  /* Headings & text rhythm (customize freely) */
+  h1{ font-size: clamp(36px, 6vw, 68px); line-height:1.05; margin:0 0 .5rem; font-family: Merriweather; }
+  h2{ font-size: clamp(22px, 3.2vw, 32px); margin:0 0 .6rem; }
+  h3{ font-size: clamp(14px, 2vw, 18px); margin:0 0 .25rem; letter-spacing:.06em; text-transform:none; color:#f5f1e8; }
+  p{ margin:.5rem 0 1rem; color: var(--muted); }
+  
+  /* ======= SHOWCASE ======= */
+  .showcase{
+    max-width: 1100px;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+  }
+  
+  /* LEFT PANE (image background) */
+  .left-pane{
+    position: relative;
+    min-height: 520px;
+    background: url("images/left-bg.jpg") center/cover no-repeat, #3f6bae; /* REPLACE left-bg.jpg */
+  }
+  .left-topbar{
+    position: absolute; inset: 18px auto auto 18px;
+    display: flex; gap: 14px; align-items: center;
+    background: rgba(0,0,0,.35); color: #f6f2e8;
+    padding: 8px 12px; border-radius: 10px;
+  }
+  .logo{ font-weight: 800; font-size: 20px; letter-spacing: .03em; font-family: Merriweather; }
+  .crumbs{ opacity: .85; font-size: .85rem; }
+  
+  .left-content{
+    position: absolute; left: 36px; right: 36px; bottom: 36px;
+    color: #f6f2e8;
+  }
+  .left-content p{ color:#e8e3d8; max-width: 46ch; }
+  .cta-row{ display:flex; gap:12px; margin-top: 14px; }
+  
+  /* RIGHT PANE */
+  .right-pane{
+    background: var(--accent);
+    display: grid;
+    grid-template-rows: auto auto auto 1fr;
+    padding: 20px 22px;
+    align-items: start;
+    justify-items: center;
+  }
+  .right-topbar{
+    width:100%; display:flex; justify-content: space-between; align-items: center;
+  }
+  .main-nav{ display:flex; justify-content: space-around; align-items: center;width: 100%;}
+  .main-nav a{
+    color:#21212a; text-decoration:none; font-weight:600;
+  }
+  .contact{
+    border:.5px solid #784f6b; padding:4px 8px; border-radius:999px;
+    color:#21212a; text-decoration:none; font-weight:600;
+  }
+  .kicker{ margin:18px 0 10px; letter-spacing:.08em; color:#3f6bae; font-family: Merriweather;}
+  
+  .portrait{
+    width: 230px; height: 260px; object-fit: cover;
+    border-radius: 12px; box-shadow: 0 6px 16px rgba(0,0,0,.12);
+  }
+  
+  .tagbar{ display:flex; gap:10px; margin:16px 0 10px; flex-wrap: wrap; justify-content:center; }
+  .tag{
+    border:0.8px solid #784f6b; background:#c5a0c2; padding:6px 10px;
+    border-radius:999px; font-size:.85rem; display:inline-flex; align-items:center; gap:8px;
+    cursor:pointer;
+  }
+  .tag:focus{ outline:2px solid #111; outline-offset:2px; }
+  
+  .thumbs{
+    display:grid; grid-auto-flow: column; grid-auto-columns: 120px;
+    gap: 12px; width:100%; overflow-x:auto; padding-bottom:8px;
+    scroll-snap-type: x mandatory; margin-top: 24px;
+  }
+  .thumb{ display:block; scroll-snap-align: start; }
+  .thumbs img{
+    width: 125px;; height:100px; object-fit: cover; border-radius:10px; display:block;
+  }
+  
+  /* Buttons (reusable) */
+  .btn{
+    display:inline-block; text-decoration:none; font-weight:700;
+    padding: 12px 18px; border-radius: 10px; transition: transform .08s ease, background .25s ease;
+  }
+  .btn:active{ transform: translateY(1px); }
+  .btn-primary{ background: var(--primary); color:#fff; }
+  .btn-primary:hover{ background: var(--primary-700); }
+  .btn-ghost{
+    background: rgba(255,255,255,.15); color:#fff; border:1px solid rgba(255,255,255,.45);
+    backdrop-filter: blur(4px);
+  }
+  .btn-outline{
+    color: var(--primary); border:2px solid var(--primary); background: transparent;
+  }
+  .button-group{ display:flex; gap:14px; flex-wrap:wrap; }
+  
+  /* Content sections */
+  .content{
+    max-width: 1100px;         /* keeps text from getting too wide */
+    margin: 56px auto; /* top right bottom left → removes left centering */ 
+  }
+  .container {
+    max-width: 1200px;   /* never let content get too wide */
+    margin: 0 auto;      /* auto = center horizontally */
+    padding: 0 40px;     /* always keep 40px space on left/right */
+    box-sizing: border-box; /* padding counts inside the width */
+  }
+  
+  /* Project grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* two equal columns */
+    gap: 50px; /* space between projects */
+    margin-top: 24px;
+  }
+  
+  .project-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 16px rgba(0,0,0,.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+    background: #fff;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0,0,0,.12);
+  }
+  
+  .project-card img {
+    width: 100%;
+    height: 250px;       /* fixed height for consistency */
+    object-fit: cover;   /* crops image nicely */
+  }
+  
+  .project-card h3 {
+    margin: 16px;
+    color: #000000;
+    font-size: 1.25rem;
+  }
+  
+  .project-card p {
+    margin: 0 16px 16px;
+    color: #555;
+    font-size: 0.95rem;
+  }
+  
+  /* Mobile: stack them */
+  @media (max-width: 768px) {
+    .project-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  #about h2 {
+    margin-bottom: 1rem;  /* creates space below the heading */
+  }
+  
+  .about-text {
+    display: flex;
+    gap: 2rem;   /* space between left and right columns */
+  }
+  
+  .about-text div {
+    flex: 1;   /* equal width */
+  }
+  
+  @media (max-width: 768px) {
+    .about-text {
+      flex-direction: column; /* stack on mobile */
+    }
+  }
+  
+  
+
+    
+  @media (min-width: 900px){
+    .process-grid{ grid-template-columns: 1fr 1fr; } /* 2 steps side by side */
+  }
+
+  /* Responsive */
+  @media (max-width: 900px){
+    .showcase{ grid-template-columns: 1fr; }
+    .left-content{ position: static; padding: 28px; }
+    .left-topbar{ position: static; margin: 14px; }
+    .right-pane{ padding: 16px; }
+    .main-nav{ display: none; } /* keep simple on mobile; JS could toggle later */
+  }
+  
